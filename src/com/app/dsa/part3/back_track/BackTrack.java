@@ -80,6 +80,5 @@ public class BackTrack {
         for (ArrayList<Integer> ls : list) {
             System.out.println("list = " + ls);
         }
-
     }
 }

@@ -7,10 +7,27 @@ import java.util.*;
 
 public class ArrayDsa {
 
-    // Function to count inversions in the array.
-    static int inversionCount(int[] arr) {
-        
-        return 0;
+
+    public List<List<Integer>> findTriplets(int[] arr) {
+        Set<Integer> set = new HashSet<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        for (int i = 0; i < arr.length - 2; i++) {
+            set.clear();
+
+            for (int j = i + 1; j < arr.length - 1; j++) {
+
+                int thirdNum = -(arr[i] + arr[j]);
+
+                if (set.contains(thirdNum)) {
+                    ans.add(List.of(arr[i], arr[j], thirdNum));
+                }
+                
+                set.add(thirdNum);
+
+            }
+        }
+        return ans;
+
     }
 
     public boolean canSplit(int arr[]) {
@@ -35,7 +52,6 @@ public class ArrayDsa {
 
         return false;
     }
-
 
 
     public int maxProfit(int[] prices) {
@@ -128,11 +144,11 @@ public class ArrayDsa {
 
 
     public String largestNumber(int[] nums) {
-//        String[] str = new String[nums.length];
-//        for (int i = 0; i < nums.length; i++) {
-//            str[i] = String.valueOf(nums[i]);
-//        }
-//        List<String> collect = Arrays.stream(nums).mapToObj(String::valueOf).toList();
+        //        String[] str = new String[nums.length];
+        //        for (int i = 0; i < nums.length; i++) {
+        //            str[i] = String.valueOf(nums[i]);
+        //        }
+        //        List<String> collect = Arrays.stream(nums).mapToObj(String::valueOf).toList();
         String[] str = Arrays.stream(nums).mapToObj(String::valueOf).toArray(String[]::new);
 
         Arrays.sort(str, new Comparator<String>() {
@@ -198,7 +214,7 @@ public class ArrayDsa {
         ArrayList<int[]> list = new ArrayList<>();
 
         Arrays.sort(arr);
-//        TreeMap<Integer, Integer> map = new TreeMap<>();
+        //        TreeMap<Integer, Integer> map = new TreeMap<>();
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
@@ -207,18 +223,18 @@ public class ArrayDsa {
                     temp[0] = arr[i];
                     temp[1] = arr[j];
                     list.add(temp);
-//                    map.put(arr[i], arr[j]);
+                    //                    map.put(arr[i], arr[j]);
                 }
             }
         }
 
-//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-//            int[] temp = new int[arr.length];
-//            temp[0] = entry.getKey();
-//            temp[1] = entry.getValue();
-//            list.add(temp);
-//
-//        }
+        //        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+        //            int[] temp = new int[arr.length];
+        //            temp[0] = entry.getKey();
+        //            temp[1] = entry.getValue();
+        //            list.add(temp);
+        //
+        //        }
         return list;
 
     }
@@ -401,21 +417,21 @@ public class ArrayDsa {
         return j;
     }
 
-//    public boolean canJumpRecur(int[] nums, int end) {
-//        if (end == 0) {
-//            return true;
-//        }
-//        for (int i = 0; i < end; i++) {
-//            if (nums[i] + i >= end) {
-//                return canJumpRecur(nums, i);
-//            }
-//        }
-//        return false;
-//    }
+    //    public boolean canJumpRecur(int[] nums, int end) {
+    //        if (end == 0) {
+    //            return true;
+    //        }
+    //        for (int i = 0; i < end; i++) {
+    //            if (nums[i] + i >= end) {
+    //                return canJumpRecur(nums, i);
+    //            }
+    //        }
+    //        return false;
+    //    }
 
-//    public boolean canJump(int[] nums) {
-//        return canJumpRecur(nums, nums.length-1);
-//    }
+    //    public boolean canJump(int[] nums) {
+    //        return canJumpRecur(nums, nums.length-1);
+    //    }
 
 
     public boolean canJump(int[] nums) {

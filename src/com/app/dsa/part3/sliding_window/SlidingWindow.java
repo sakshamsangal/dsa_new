@@ -279,6 +279,6 @@ public class SlidingWindow {
 
     public static void main(String[] args) {
         SlidingWindow slidingWindow = new SlidingWindow();
-        int[] arr = {1, 2};
+        int[] arr = {2,3,1,2,4,3};
     }
 }

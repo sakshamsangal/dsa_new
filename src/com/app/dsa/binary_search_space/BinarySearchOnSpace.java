@@ -17,6 +17,7 @@ abstract class BinarySearchOnSpace {
             } else {
                 lowLimit = mid + 1;
             }
+
         }
 
         return answer;

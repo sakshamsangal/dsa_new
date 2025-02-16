@@ -1,7 +1,6 @@
 package com.app.design_pattern.ObserverPattern.src.com.balazsholczer.observer;
 
 public class WeatherObserver implements Observer {
-
 	private int pressure;
 	private int temperature;
 	private int humidity;
