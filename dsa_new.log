@@ -1,3 +1,11 @@
+longest valid parenthesis
+who will give me valid string? closed parenthesis
+what is starting point? previous of '('
+keep track of last 2 items
+
+
+
+
 some prefix sums
 current prefix sum==target
     target found

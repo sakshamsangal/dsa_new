@@ -1,4 +1,4 @@
-package com.app.dsa;
+package com.app.gfg_potd;
 
 import java.util.Map;
 

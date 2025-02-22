@@ -1,0 +1,137 @@
+caching
+l1
+    session db connection
+l2
+    session factory
+    app level
+thread execution
+
+kafka
+    kafka zip 9092
+    zookeeper
+        2181
+    bin win
+    kafka server start -- server properties
+    zookeeper server start -- zookeeper properties
+
+    --topic user-topic
+    --bs lh:9092
+
+    producer
+        example delivery boy
+        dependency
+            spring for apache kafka
+        bean
+            new topic
+                topic builder
+                    name-'loc-upd'
+
+        service
+            kafka template string, string
+                send -kv
+        config yml
+            bs, serializer
+            spring kafka producer
+                bootstrap-servers=localhost:9092
+                key-serializer=org apache kafka common serialization string serial
+                value-serializer=org apache kafka common serialization string serial
+
+    consumer
+        example end user
+        @config
+        group id=gp-1
+        auto offset reset = earliest
+        key value deserializer-serialization
+design pattern
+    strategy
+        vehicle
+            passenger
+                drive()
+            off road
+                drive()
+            sports
+                drive()
+
+            off road and sports have same drive method
+            this is bad as code is duplicate
+
+
+            drive interface
+                normal
+                special
+
+
+    observer design pattern
+        subject/observable/goal
+            stock interface
+                eg maggie
+                add
+                remove
+                notify
+                setData
+
+        listener/interested person/observer
+            notification interface
+                eg email,text message
+                update
+
+longest valid parenthesis
+who will give me valid string? closed parenthesis
+what is starting point? previous of '('
+keep track of last 2 items
+
+
+
+
+some prefix sums
+current prefix sum==target
+    target found
+is there any prefix sum + target == current prefix sum?
+    target found
+
+
+am i matching?
+r both on left?
+r both on right?
+1 left 1 right?
+
+
+go to every cell
+is starting point
+    explore in 4 direction
+    not found
+        this cell can not lead to solution
+        we can try another cell
+    cell found
+        is my path completed?
+        yes
+            return path found
+        no
+            can i go other cell?
+            yes
+                happy case
+                not sure if
+            no
+                path not formed
+exploreCell()
+    desired cell?
+        add this cell to path
+        my path completed?
+            return path found
+        no
+            exploreCell()
+
+cell
+which path to choose?
+down
+right
+is cell destination?
+safe
+unsafe
+
+
+
+This list of the 100 most common vocabulary words in English can be used as a reference for beginner English students. It's a good idea to master these words fully before trying to move on to less common words, since this is the vocabulary you will encounter most often. These are some of the first words that native English speaking children learn how to spell. You can also make sure that you not only recognize these words and know how to pronounce them, but that you can also spell them correctly. Mistakes in spelling these short, common words are more significant than mistakes spelling more complicated words you may learn later on.
+
+
+
