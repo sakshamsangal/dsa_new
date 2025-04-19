@@ -1,7 +1,7 @@
 package com.app.dsa.part1.linkedlist;
 
 import com.app.dsa.model.ListNode;
-import com.app.dsa.model.gfg.Node;
+import com.app.dsa.model.gfg.linklist.Node;
 
 import java.util.ArrayList;
 import java.util.List;

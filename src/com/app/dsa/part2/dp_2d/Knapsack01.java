@@ -43,14 +43,14 @@ public class Knapsack01 {
     public static void main(String[] args) {
         Knapsack01 dp2Dim = new Knapsack01();
         int[] profit = {60, 100, 120};
-        int[] weight = {10, 20, 30};
+        int[] weight = {4, 2, 3};
 
 //        int[] profit = {1, 2, 3};
 //        int[] weight = {4, 5, 1};
 
 //        int i = dp2Dim.knapSack(50, weight, profit, weight.length);
 //        int i = dp2Dim.knapSackTab(4, weight, profit);
-        int i = dp2Dim.knapSackTab(50, weight, profit);
+        int i = dp2Dim.knapSackTab(6, weight, profit);
         System.out.println("i = " + i);
 
     }

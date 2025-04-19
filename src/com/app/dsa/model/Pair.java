@@ -3,6 +3,7 @@ package com.app.dsa.model;
 public class Pair {
         public int ceil;
         public int floor;
+        public boolean visited;
 
         public Pair() {
         }

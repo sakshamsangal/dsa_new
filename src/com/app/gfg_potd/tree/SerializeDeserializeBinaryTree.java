@@ -1,4 +1,4 @@
-package com.app.gfg_potd;
+package com.app.gfg_potd.tree;
 
 import com.app.dsa.model.gfg.tree.Node;
 

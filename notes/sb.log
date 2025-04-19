@@ -1,3 +1,77 @@
+sort
+    bubble
+    merge
+
+ElectricFord
+
+template
+inheritance
+abstract class
+
+
+strategy
+composition
+
+facade
+sometimes bubble
+sometimes merge
+
+
+flyweight
+reuse objects
+Map
+fixed-intrinsic-color
+extrinsic-x,y
+
+find parent
+find start node
+
+parent
+which node to burn?
+    get it from queue
+
+burn x node
+its nei also be burned
+
+shall i  burn just now?
+lets add it to queue and burn later on
+
+
+
+
+
+stream
+collect
+groupingBy
+
+traverse
+identify hotspots
+
+ Map<String, Optional<Employee>> highestPaidByDept = employees.stream()
+            .collect(Collectors.groupingBy(
+                Employee::getDepartment,
+                Collectors.maxBy(Comparator.comparingDouble(Employee::getSalary))
+            ));
+
+
+
+
+
+house
+
+
+kruskal
+nodes
+
+
+
+
+
+
+
+
+
+
 caching
 l1
     session db connection
@@ -5,6 +79,266 @@ l2
     session factory
     app level
 thread execution
+look j
+
+
+
+Java
+Sorting
+single item already sorted
+
+bubble
+move largest item to end
+fix
+insertion
+    place item in sorted array
+    look from last
+        shift while look up
+        identity index
+    place item to index
+
+selection
+    find smallest item index
+    swap smallest item with 0 index
+heap
+
+
+Graph
+dfs
+
+dfs--print unvis node
+    print src
+    mark src as vis
+    nei[] of src
+        if nei is not vis
+            recur for nei
+
+
+bfs-- process unvis node
+
+    add src to unvis queue
+    while unvis queue is not empty
+        poll from unvis que
+        mark poll vis
+        nei[] polled
+            if nei not vis
+                add nei to unvis que
+
+no. of island
+detect cycle
+dir
+und
+shortest path from source to all
+dij
+    mark all destination disFromSc infinite
+    pick destination
+        update distance
+
+bell
+topo sort dag
+bfs
+fix
+
+dfs
+bridges
+ap
+    node
+        parent-skip
+        ancestor-----update low
+        unvis child
+            unvis child count ++;
+            wait
+            let unvis find its low
+            recur for unvis node
+
+            if node is not root
+                unvis node low
+                    equal-- node is ap yes due to this unvis node
+                    more -- node is ap yes due to this unvis node
+                    less -- node is ap no  due to this unvis node
+                        update low
+    if node is root and unvis child more than 1
+        root is ap
+
+kosa
+tarzan
+mst
+prims
+kruskal
+
+
+
+variableOfType("") "exp" -- is null
+
+
+- developed in ?
+- whom?
+- features?
+- platform independent
+
+F8::myFun(["^+{Left}", "^c"])
+
+singleton class
+only 1 obj should be created
+
+eager
+  static variable --- create obj
+  private constructor
+  getInstance
+    -- instance
+
+lazy
+  static variable
+  private constructor
+  getInstance
+    -- null -- create object
+    -- instance
+
+synchronized
+  static variable
+  private constructor
+  synchronized getInstance
+    -- null -- create object
+    -- instance
+
+  calling many times
+    getInstance -- do lock & unlock
+    getInstance -- why to lock when object is already created
+    lock/unlock is time consuming
+    getInstance --
+    getInstance --
+    getInstance --
+  synchronized -- do lock and unlock
+
+
+double check lock
+Instead of synchronizing the whole method we we will synchronize only certain part of code
+
+  static variable -- volatile --read write operation will occur from memory not from cache
+  private constructor -- outside class obj creating prohibited
+  getInstance
+    -- null
+synchronized null -- create object
+    -- instance
+  t1-- core1-- cache --l1 --memory
+  t2 --core2-- cache --l1 --memory
+  first write in l1 cache-- memory
+
+  volatile
+    time consuming
+    read/write op---
+    cache is not checked
+    directly memory is checked
+
+bill pugh
+  uses lazy idea
+  nested class...
+  nested class
+    loaded when they are used
+
+
+enum
+  default.. all constructors are private
+  jvm---1 obj exist
+
+
+immutable class
+-- string
+-- unchanged state
+final class--
+no subclass is allowed
+all members var private final
+no setter
+constructor injection
+can't change to another list
+copy of list
+no one can change
+
+
+threadpool task executor
+
+collection of thread t1, t2, t3
+5
+perform task
+app --task1-- t1
+thread pool adv.
+	reuse -- 5 (thread creation time consuming)
+	thread cycle mgt is done by framework
+	efficient no. of threads
+
+context switch
+	cpu is idle
+
+if thread free in threadpool
+	assign task to thread
+else if queue is not full
+	add task to queue
+else if pool size(thread creation) is not full
+	thread creation
+	assign task to thread
+else
+	reject task
+
+free thread check queue
+
+executor
+	executor service
+		stop -- shutdown -- isTerminated
+		thread pool executor
+			custom threadpool
+		fork join
+		sch executor service
+		sch thread pool executor
+
+threadpool executor
+	pool size
+		-- core = 2
+		-- max = 5
+	timeout=true
+		check keep alive time
+		idle for certain time - 5 sec (time unit)
+		remove thread
+
+for common cases
+we prefer no thread creation, we prefer buffer like queue
+
+queue
+	bounded
+	unbounded
+
+thread factory
+	custom thread name
+	custom thread priority
+	daemon flag
+
+reject execution handler
+	reject task
+	policy
+		abort -- throw exception
+		caller run -- run task on caller thread
+		discard -- silent
+		discard oldest
+			-- in queue, remove oldest
+
+threadpool executor cycle
+	running
+		submit()
+		add new task
+
+	shutdown
+		shutdown()
+		reject new task
+		keep new task running
+
+	terminated
+		thread removed
+	stop
+		shutdownNow()
+		ask executor to reject new task
+		stop ongoing thread
+
+1 core = 1 thread
+
 
 kafka
     kafka zip 9092
@@ -98,7 +432,7 @@ r both on right?
 
 go to every cell
 is starting point
-    explore in 4 direction
+    explore in 4 directionEnum
     not found
         this cell can not lead to solution
         we can try another cell

@@ -1,4 +1,4 @@
-package com.app.gfg_potd;
+package com.app.gfg_potd.backtrack;
 
 import java.util.Map;
 

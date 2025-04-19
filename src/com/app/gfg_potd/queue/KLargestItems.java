@@ -1,4 +1,4 @@
-package com.app.gfg_potd;
+package com.app.gfg_potd.queue;
 
 import java.util.*;
 

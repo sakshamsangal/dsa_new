@@ -2,7 +2,7 @@ package com.app.dsa.part1.linkedlist;
 
 import com.app.dsa.model.ListNode;
 import com.app.dsa.model.NodeRandom;
-import com.app.dsa.model.gfg.Node;
+import com.app.dsa.model.gfg.linklist.Node;
 import com.app.dsa.model.gfg.NodeChar;
 
 import java.util.HashMap;

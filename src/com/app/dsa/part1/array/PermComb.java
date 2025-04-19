@@ -1,7 +1,7 @@
 package com.app.dsa.part1.array;
 
 
-import com.app.dsa.util.MyUtil;
+import com.app.dsa.util.AppUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -121,11 +121,11 @@ public class PermComb {
             return;
         }
         for (int i = start; i < nums.length; i++) {
-            MyUtil.swapArrItem(nums, start, i);
+            AppUtil.swapArrItem(nums, start, i);
 
             permuteUtil(res, nums, i + 1);
 
-            MyUtil.swapArrItem(nums,  i, start);
+            AppUtil.swapArrItem(nums,  i, start);
         }
     }
     public List<List<Integer>> permute(int[] nums) {

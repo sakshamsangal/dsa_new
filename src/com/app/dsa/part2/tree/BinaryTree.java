@@ -1,8 +1,8 @@
 package com.app.dsa.part2.tree;
 
 import com.app.dsa.model.Distance;
-import com.app.dsa.model.Node;
 import com.app.dsa.model.TreeNode;
+import com.app.dsa.model.gfg.tree.Node;
 
 import java.util.*;
 

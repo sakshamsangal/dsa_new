@@ -1,4 +1,4 @@
-package com.app.gfg_potd;
+package com.app.gfg_potd.dp;
 
 import java.util.Stack;
 

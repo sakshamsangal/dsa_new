@@ -1,7 +1,5 @@
 package com.app.dsa.part1.stack;
 
-import com.app.dsa.model.gfg.Node;
-
 import java.util.*;
 
 public class Sample1_07_16 {

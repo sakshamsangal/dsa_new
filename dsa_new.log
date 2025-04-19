@@ -21,7 +21,7 @@ r both on right?
 
 go to every cell
 is starting point
-    explore in 4 direction
+    explore in 4 directionEnum
     not found
         this cell can not lead to solution
         we can try another cell

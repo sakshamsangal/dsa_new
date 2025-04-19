@@ -1,7 +1,7 @@
 package com.app.dsa.binary_search_space;
 
 
-import com.app.dsa.model.gfg.Node;
+import com.app.dsa.model.gfg.linklist.Node;
 
 import java.util.Arrays;
 import java.util.Objects;
